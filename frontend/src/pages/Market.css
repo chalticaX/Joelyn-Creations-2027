@@ -1,0 +1,92 @@
+.market-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 4%;
+  box-sizing: border-box;
+  background: #f3f3f7;
+}
+
+.market-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 25px 20px;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+}
+
+.market-heading {
+  color: #fff9f3;
+  font-size: 20px;
+  margin: 0 0 30px;
+  font-weight: 700;
+}
+
+.market-products {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.market-product {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  text-decoration: none;
+  color: #fff9f3;
+  text-align: center;
+}
+
+.market-product-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.market-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.market-product:hover img {
+  transform: scale(1.04);
+}
+
+.market-product-price {
+  margin: 10px 0 5px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.market-product-name {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .market-page {
+    padding: 25px 12px;
+  }
+
+  .market-container {
+    padding: 20px 12px;
+  }
+
+  .market-products {
+    gap: 12px;
+  }
+
+  .market-heading {
+    font-size: 17px;
+  }
+
+  .market-product-price,
+  .market-product-name {
+    font-size: 11px;
+  }
+}
